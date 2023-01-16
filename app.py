@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
+    visa = Article("https://www.irishimmigration.ie/visa-decisions/")
+    visa.download()
+    visa.parse()
+    words = visa.text.split(" ")
     updatedIndex = words.index("(updated:")
     header = f"Recent decisions in the Dublin visa office (updated: {words[updatedIndex + 1]} {words[updatedIndex + 2]} {words[updatedIndex + 3][:5]}"
     bigger = 54364092
@@ -42,10 +46,7 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    visa = Article("https://www.irishimmigration.ie/visa-decisions/")
-    visa.download()
-    visa.parse()
-    words = visa.text.split(" ")
+
     HOST = environ.get('SERVER_HOST', 'localhost')
     try:
         PORT = int(environ.get('SERVER_PORT', '5555'))
