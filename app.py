@@ -39,7 +39,8 @@ def hello_world():
         my_decision = "Your decision number is 54364092 and it hasn't been proccessed "
     return f'''
         <h1> Dear TAHMINEH MOSANNENI,</h1>
-<pre>Your visa application reference number: IRL54364092 has been received at the Dublin Operation Centre for processing on Dec 06, 2022</pre>
+<pre>Your visa application reference number: IRL54364092 
+has been received at the Dublin Operation Centre for processing on <strong>Dec 06, 2022</strong></pre>
             <h3>{header} </h3>
             <pre> 
             Previous number is {smaller} and it's { words[words.index(str(smaller)) + 1]}
