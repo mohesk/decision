@@ -10,7 +10,7 @@ def hello_world():
     visa.parse()
     words = visa.text.split(" ")
     updatedIndex = words.index("(updated:")
-    header = f"Recent decisions in the Dublin visa office (updated: {words[updatedIndex + 1]} {words[updatedIndex + 2]} {words[updatedIndex + 3][:5]}"
+    header = f"Recent decisions in the Dublin visa office <strong>(updated: {words[updatedIndex + 1]} {words[updatedIndex + 2]} {words[updatedIndex + 3][:5]}</strong>"
     bigger = 54364092
     smaller = 54364092
     no = 54364092
@@ -38,11 +38,12 @@ def hello_world():
     else:
         my_decision = "Your decision number is 54364092 and it hasn't been proccessed "
     return f'''
-        <h1> Dear TAHMINEH MOSANNENI,</h1>
-<pre>Your visa application reference number: IRL54364092 
+        <pre>Dear <strong>TAHMINEH MOSANNENI</strong>,
+        
+Your visa application reference number: <strong>IRL54364092</strong> 
 has been received at the Dublin Operation Centre for processing on <strong>Dec 06, 2022</strong></pre>
-            <h3>{header} </h3>
-            <pre> 
+            
+            <pre>{header}
             Previous number is {smaller} and it's { words[words.index(str(smaller)) + 1]}
             {my_decision}
             Next number is {bigger} and it's { words[words.index(str(bigger)) + 1]}
