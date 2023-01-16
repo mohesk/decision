@@ -41,7 +41,8 @@ def hello_world():
         <pre>Dear <strong>TAHMINEH MOSANNENI</strong>,
         
 Your visa application reference number: <strong>IRL54364092</strong> 
-has been received at the Dublin Operation Centre for processing on <strong>Dec 06, 2022</strong></pre>
+has been received at the Dublin Operation Centre 
+for processing on <strong>Dec 06, 2022</strong></pre>
             
             <pre>{header}
             Previous number is {smaller} and it's { words[words.index(str(smaller)) + 1]}
